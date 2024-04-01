@@ -8,14 +8,14 @@ window.location.href = generateGoogleCalendarUrl({
 });
 
 ## Outlook example
-window.location.href = generateGoogleCalendarUrl({
+window.location.href = generateOutlookCalendarUrl({
   text: "Event name",
   details: "Event description",
   date: new Date(),
 });
 
 
-### Options
+## Options
 
 - title?: string;
 - location?: string;
