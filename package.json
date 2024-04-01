@@ -1,0 +1,32 @@
+{
+  "name": "generate-add-event-calendar-url",
+  "version": "1.0.0",
+  "description": "Generate google, outlook calendar add event url",
+  "main": "dist/src/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc && npx swc ./src -d dist"
+  },
+  "keywords": [
+    "google",
+    "gmail",
+    "outlook",
+    "calendar",
+    "event",
+    "url"
+  ],
+  "author": "angularbinh2020",
+  "license": "ISC",
+  "devDependencies": {
+    "@swc/cli": "^0.3.12",
+    "@swc/core": "^1.4.11",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "date-and-time": "^3.1.1"
+  },
+  "files": [
+    "/dist"
+  ]
+}
