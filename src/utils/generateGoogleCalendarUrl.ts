@@ -1,4 +1,4 @@
-import * as dayjs from "date-and-time";
+import { format, addDays } from "date-and-time";
 const BASE_URL = "http://www.google.com/calendar/event?action=TEMPLATE";
 const MAX_LENGTH = 512;
 
@@ -17,14 +17,14 @@ function toAllDay(options: Params) {
   const { date } = options;
   return (
     "&dates=" +
-    dayjs.format(date, "YYYYMMDD") +
+    format(date, "YYYYMMDD") +
     "/" +
-    dayjs.format(dayjs.addDays(date, 1), "YYYYMMDD")
+    format(addDays(date, 1), "YYYYMMDD")
   );
 }
 
 function toIsoHour(date: Date) {
-  return dayjs.format(date, "YYYYMMDDTHHmmss", true) + "Z";
+  return format(date, "YYYYMMDDTHHmmss", true) + "Z";
 }
 
 function toHour(options: Params) {
