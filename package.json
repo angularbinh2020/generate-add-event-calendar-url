@@ -1,12 +1,13 @@
 {
   "name": "generate-add-event-calendar-url",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generate google, outlook calendar add event url",
-  "main": "dist/src/index.js",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tsc && npx swc ./src -d dist"
+    "clean": "rimraf dist",
+    "build": "yarn clean && npx rollup -c"
   },
   "keywords": [
     "google",
@@ -19,12 +20,16 @@
   "author": "angularbinh2020",
   "license": "ISC",
   "devDependencies": {
-    "@swc/cli": "^0.3.12",
-    "@swc/core": "^1.4.11",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/node": "^20.12.2",
+    "rollup": "^4.13.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.36.0",
     "typescript": "^5.4.3"
   },
   "dependencies": {
-    "date-and-time": "^3.1.1"
+    "date-and-time": "^3.1.1",
+    "rimraf": "^5.0.5"
   },
   "files": [
     "/dist"

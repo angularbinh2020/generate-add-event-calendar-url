@@ -1,7 +1,7 @@
-import { format, addDays } from "date-and-time";
+import dateJs from "date-and-time";
 const BASE_URL = "http://www.google.com/calendar/event?action=TEMPLATE";
 const MAX_LENGTH = 512;
-
+const { format, addDays } = dateJs;
 interface Params {
   title?: string;
   location?: string;
@@ -35,7 +35,7 @@ function toHour(options: Params) {
 }
 
 function toStringParameter(
-  options,
+  options: any,
   propertyName: string,
   alternativeName?: string
 ) {

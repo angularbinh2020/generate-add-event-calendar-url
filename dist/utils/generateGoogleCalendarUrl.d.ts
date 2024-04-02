@@ -9,4 +9,3 @@ interface Params {
 }
 export declare const generateGoogleCalendarUrl: (options: Params) => string;
 export {};
-//# sourceMappingURL=generateGoogleCalendarUrl.d.ts.map

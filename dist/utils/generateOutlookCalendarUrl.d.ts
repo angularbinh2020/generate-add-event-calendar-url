@@ -9,4 +9,3 @@ interface Params {
 }
 export declare const generateOutlookCalendarUrl: (options: Params) => string;
 export {};
-//# sourceMappingURL=generateOutlookCalendarUrl.d.ts.map
